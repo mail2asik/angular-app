@@ -1,0 +1,49 @@
+<div class="account-container">
+	
+	<div class="content clearfix">
+		
+		<form novalidate name="loginForm" autocomplete="off">
+		
+			<h1>Member Login</h1>		
+			
+			<div class="login-fields">
+				
+				<p>Please provide your details</p>
+				
+				<div class="field">
+					<label for="username">Email</label>
+					<input type="text" name="email" value="" placeholder="Email" class="login username-field" ng-model="login.email" 	validator="required,email" required-error-message="Email is required" email-error-message="Invalid email address" valid-method="watch"	/>
+				</div> <!-- /field -->
+				
+				<div class="field">
+					<label for="password">Password:</label>
+					<input type="password" name="password" value="" placeholder="Password" class="login password-field" ng-model="login.password" validator="required" required-error-message="Password is required" valid-method="watch" />
+					
+				</div> <!-- /password -->
+				
+			</div> <!-- /login-fields -->
+			
+			<div class="login-actions">
+				
+				<span class="login-checkbox">
+					<input id="Field" name="Field" type="checkbox" class="field login-checkbox" value="First Choice" tabindex="4" />
+					<label class="choice" for="Field">Keep me signed in</label>
+				</span>
+									
+				<button class="button btn btn-success btn-large" validation-submit="loginForm" ng-click="doLogin()">Sign In</button>
+				
+			</div> <!-- .actions -->
+			
+			
+			
+		</form>
+		
+	</div> <!-- /content -->
+	
+</div> <!-- /account-container -->
+
+
+
+<div class="login-extra">
+	<a href="javascript:;">Reset Password</a>
+</div> <!-- /login-extra -->

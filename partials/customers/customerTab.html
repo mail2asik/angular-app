@@ -1,0 +1,30 @@
+<div class="row">
+<div class="span12">
+  
+    <div class="widget widget-table action-table">
+	<div class="widget-header"> <i class="icon-th-list"></i>
+	  <h3>Customer</h3>
+	</div>
+	<!-- /widget-header -->
+	<div class="widget-content" style="padding:10px;">
+				
+				<tabset>
+					<tab heading="View" ui-sref="customer.view({id:$state.params.id})" active="$state.includes('customer.view')">
+						<div ui-view="viewCustomer"></div>
+					</tab>
+					<tab heading="Edit" ui-sref="customer.edit({id:$state.params.id})" active="$state.includes('customer.edit')">
+						<div ui-view="editCustomer"></div>
+					</tab>
+				</tabset>
+				
+	</div>
+	<!-- /widget-content --> 
+  </div>
+  <!-- /widget --> 
+
+
+  
+</div>
+<!-- /span12 --> 
+</div>
+<!-- /row --> 

@@ -1,0 +1,50 @@
+<div class="row">
+<div class="span6">
+  <div class="widget widget-nopad">
+	<div class="widget-header"> <i class="icon-list-alt"></i>
+	  <h3> Customers</h3>
+	</div>
+	<!-- /widget-header -->
+	<div class="widget-content">
+	  <div class="widget big-stats-container">
+		<div class="widget-content" style="padding:5px;" ng-controller="customersReportsController">
+		  <div ng-show="data.success">
+		  
+			<canvas id="line" class="chart chart-line" data="data.points"
+			  labels="data.labels" legend="true" series="data.series">
+			</canvas> 
+			
+		  </div>
+		<div ng-show="data.error" class="alert">
+			<strong>Error!</strong> {{data.errorMsg}}
+		</div>
+		</div>
+		<!-- /widget-content --> 
+		
+	  </div>
+	</div>
+  </div>
+   <!-- /widget -->
+ </div>  
+
+<div class="span6"> 
+  <div class="widget widget-nopad">
+	<div class="widget-header"> <i class="icon-list-alt"></i>
+	  <h3> Orders</h3>
+	</div>
+	<!-- /widget-header -->
+	<div class="widget-content" style="padding:5px;" ng-controller="ordersReportsController">
+	  <div ng-show="data.success">
+			<canvas id="bar" class="chart chart-bar" data="data.points"  labels="data.labels"></canvas> 
+	  </div>
+	  <div ng-show="data.error" class="alert">
+		<strong>Error!</strong> {{data.errorMsg}}
+	  </div>
+	</div>
+	<!-- /widget-content --> 
+  </div>
+  <!-- /widget -->
+</div>
+<!-- /span6 -->
+</div>
+<!-- /row --> 
